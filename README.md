@@ -3,7 +3,9 @@
 Este proyecto nace de la necesidad de sustituir la herramienta AutoMySQLBackup (v3.0), la cuale presenta incompatibilidades con las versiones modernas de Bash (5.2+), PHP 8.0 y los nuevos estándares de MariaDB/MySQL en distribuciones vanguardistas como Fedora 43.
 El error común line 835: 6: Bad file descriptor en scripts antiguos fue el detonante para desarrollar esta solución desde cero, priorizando la simplicidad, la seguridad de los datos y la transparencia en los reportes.
 
-***NOTA:*** Usa todos los códigos con precaución, no soy responsable por daños que pueda causar una mala implementación.
+> [!IMPORTANT]
+> NOTA:
+> Usa todos los códigos con precaución, no soy responsable por daños que pueda causar una mala implementación.
 
 Características
 Mantiene conceptos base de AutoMySQLBackup y le agregue algunas personalizaciones ;-)

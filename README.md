@@ -68,5 +68,5 @@ cron
 # Todos los domingos a las 5:00 AM - Simulacro de Restauración
 00 05 * * 7 /usr/local/bin/test-mysql-restore.sh
 
-📝 Origen del Proyecto
+Origen del Proyecto
 Este script fue desarrollado para resolver los fallos de redirección de descriptores de archivos en sistemas modernos. A diferencia de soluciones monolíticas, este enfoque separa el respaldo de la validación, permitiendo que el administrador reciba un reporte detallado no solo de que el archivo existe, sino de que los datos son recuperables.

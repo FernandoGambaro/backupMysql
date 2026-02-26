@@ -30,7 +30,8 @@ password="tu_password_real"
 host=localhost
 Usa el código con precaución.
 
-***Importante:*** Dale permisos restrictivos: chmod 600 ~/.my.cnf
+> [!IMPORTANT]
+> ***Importante:*** Dale permisos restrictivos: chmod 600 '~/.my.cnf'
 
 ***2. Configurar el Envío de Correo (s-nail) (sudo dnf install s-nail)***
 En Fedora 43, s-nail ha modernizado su configuración. Edita el archivo global:

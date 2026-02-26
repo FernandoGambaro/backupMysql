@@ -1,4 +1,4 @@
-# 🚀 Modern MySQL Backup & Verify (Fedora 43+)
+# Modern MySQL Backup & Verify (Fedora 43+ PHP 8.0+)
 
 Este proyecto nace de la necesidad de sustituir la herramienta clásica `AutoMySQLBackup` (v3.0), la cual presenta incompatibilidades con versiones modernas de **Bash (5.2+)**, **PHP 8.0+** y los nuevos estándares de **MariaDB/MySQL** en distribuciones de vanguardia como **Fedora 43**.
 
@@ -10,25 +10,28 @@ El error recurrente `line 835: 6: Bad file descriptor` en scripts antiguos fue e
 
 ---
 
-## ✨ Características
+##  Características
 Este sistema mantiene los conceptos base de *AutoMySQLBackup* e integra personalizaciones críticas para la estabilidad moderna:
 
-*   **📅 Rotación Inteligente**: Clasificación automática en carpetas `daily`, `weekly` y `monthly`.
-*   **🔐 Seguridad**: Uso de archivos de credenciales (`.my.cnf`) para evitar exponer contraseñas en los procesos del sistema.
-*   **✔️ Integridad**: Verificación mediante `zgrep` de que el archivo `.gz` se generó y cerró correctamente.
-*   **🧪 Simulacro de Restauración**: Script complementario que recrea la base de datos en un entorno temporal para asegurar que el backup es funcional.
-*   **📧 Reportes Modernos**: Totalmente compatible con la nueva sintaxis de **s-nail (v15+)**.
+*   ** Rotación Inteligente**: Clasificación automática en carpetas `daily`, `weekly` y `monthly`.
+*   ** Seguridad**: Uso de archivos de credenciales (`.my.cnf`) para evitar exponer contraseñas en los procesos del sistema.
+*   ** Integridad**: Verificación mediante `zgrep` de que el archivo `.gz` se generó y cerró correctamente.
+*   ** Simulacro de Restauración**: Script complementario que recrea la base de datos en un entorno temporal para asegurar que el backup es funcional.
+*   ** Reportes Modernos**: Totalmente compatible con la nueva sintaxis de **s-nail (v15+)**.
 
 ---
 
-## 🛠️ Instalación y Configuración
+##  Instalación y Configuración
 
 ### 1. Credenciales de acceso a MySQL (`~/.my.cnf`)
 Para que los scripts funcionen de forma segura y sin intervención manual, crea un archivo de configuración en tu **home**:
 
 ```bash
-nano ~/.my.cnf
+nano ~/.my.cnf```
 
+Pega el siguiente contenido (ajusta tu usuario y contraseña):
+
+ini
 [client]
 user=tu_usuario_mysql
 password="tu_password_real"

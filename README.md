@@ -1,9 +1,9 @@
-Modern MySQL Backup & Verify Fedora 43+ PHP 8.0+
+**Modern MySQL Backup & Verify Fedora 43+ PHP 8.0+**
 
 Este proyecto nace de la necesidad de sustituir la herramienta AutoMySQLBackup (v3.0), la cuale presenta incompatibilidades con las versiones modernas de Bash (5.2+), PHP 8.0 y los nuevos estándares de MariaDB/MySQL en distribuciones vanguardistas como Fedora 43.
 El error común line 835: 6: Bad file descriptor en scripts antiguos fue el detonante para desarrollar esta solución desde cero, priorizando la simplicidad, la seguridad de los datos y la transparencia en los reportes.
 
-NOTA: Usa todos los códigos con precaución, no soy responsable por daños que pueda causar una mala implementación.
+***NOTA:*** Usa todos los códigos con precaución, no soy responsable por daños que pueda causar una mala implementación.
 
 Características
 Mantiene conceptos base de AutoMySQLBackup y le agregue algunas personalizaciones ;-)
@@ -13,8 +13,8 @@ Mantiene conceptos base de AutoMySQLBackup y le agregue algunas personalizacione
 * Simulacro de Restauración: Script complementario que recrea la base de datos en un entorno temporal para asegurar que el backup es funcional.
 * Reportes Modernos: Compatible con la nueva sintaxis de s-nail (v15+).
 
-Instalación y Configuración
-1. Credenciales de acceso a mysql (~/.my.cnf)
+**Instalación y Configuración**
+***1. Credenciales de acceso a mysql (~/.my.cnf)***
 Para que los scripts funcionen sin pedir contraseña y de forma segura, crea un archivo de configuración en tu home:
 bash
 nano ~/.my.cnf
@@ -27,20 +27,19 @@ password="tu_password_real"
 host=localhost
 Usa el código con precaución.
 
-Importante: Dale permisos restrictivos: chmod 600 ~/.my.cnf
+***Importante:*** Dale permisos restrictivos: chmod 600 ~/.my.cnf
 
-2. Configurar el Envío de Correo (s-nail) (sudo dnf install s-nail)
+***2. Configurar el Envío de Correo (s-nail) (sudo dnf install s-nail)***
 En Fedora 43, s-nail ha modernizado su configuración. Edita el archivo global:
 bash
 sudo nano /etc/s-nail.rc
-Usa el código con precaución.
 
 Añade al final tu configuración SMTP usando la sintaxis de URL (v15+):
 ini
 # Si tu usuario tiene '@', cámbialo por '%40'
 set mta=smtps://usuario%40dominio.com:password@smtp.tu-servidor.com:465
 ////////////////////////////
-Puede que no te funcione esa configuración, puedes usar esta otra
+*Puede que no te funcione esa configuración, puedes usar esta otra*
 set smtp=smtp://tu-servidor-smtp.com:587
 set smtp-auth=login
 set smtp-auth-user=tu-cuenta@dominio.com
@@ -49,7 +48,7 @@ set from="Backup Server <tu-cuenta@dominio.com>"
 set smtp-use-starttls
 
 
-3. Instalación de los Scripts
+***3. Instalación de los Scripts***
 Descarga backup-mysql.sh y test-mysql-restore.sh en /usr/local/bin/.
 Asigna permisos de ejecución y propiedad a tu usuario:
 bash

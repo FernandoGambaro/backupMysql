@@ -17,6 +17,7 @@ Mantiene conceptos base de AutoMySQLBackup y le agregue algunas personalizacione
 
 **Instalación y Configuración**
 ***1. Credenciales de acceso a mysql (~/.my.cnf)***
+
 Para que los scripts funcionen sin pedir contraseña y de forma segura, crea un archivo de configuración en tu home:
 bash
 nano ~/.my.cnf

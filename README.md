@@ -27,7 +27,9 @@ Este sistema mantiene los conceptos base de *AutoMySQLBackup* e integra personal
 Para que los scripts funcionen de forma segura y sin intervención manual, crea un archivo de configuración en tu **home**:
 
 ```bash
-nano ~/.my.cnf```
+nano ~/.my.cnf
+
+---
 
 Pega el siguiente contenido (ajusta tu usuario y contraseña):
 

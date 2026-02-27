@@ -1,6 +1,6 @@
 # Modern MySQL Backup & Verify (Fedora 43+ PHP 8.0+)
 
-Este proyecto nace de la necesidad de sustituir la herramienta clásica `AutoMySQLBackup` (v3.0), la cual presenta incompatibilidades con versiones modernas de **Bash (5.2+)**, **PHP 8.0+** y los nuevos estándares de **MariaDB/MySQL** en distribuciones de vanguardia como **Fedora 43**.
+Este proyecto nace de la necesidad de sustituir la herramienta clásica `AutoMySQLBackup` (v3.0), la cual presenta incompatibilidades con versiones modernas de **Bash (5.2+)**, **PHP 8.0+** y los nuevos estándares de **MariaDB/MySQL** en distribuciones de vanguardia como **Fedora 43**, para optimizar estos script he utilizado el MODO IA de google.
 
 El error recurrente `line 835: 6: Bad file descriptor` en scripts antiguos fue el detonante para desarrollar esta solución desde cero, priorizando la simplicidad, la seguridad de los datos y la transparencia en los reportes.
 

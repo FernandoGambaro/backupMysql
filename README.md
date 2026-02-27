@@ -29,8 +29,6 @@ Para que los scripts funcionen de forma segura y sin intervención manual, crea 
 ```bash
 nano ~/.my.cnf
 
----
-
 Pega el siguiente contenido (ajusta tu usuario y contraseña):
 
 ini
@@ -43,7 +41,7 @@ host=localhost
 SEGURIDAD: Es obligatorio asignar permisos restrictivos para que nadie más pueda leer tu contraseña:
 chmod 600 ~/.my.cnf
 
-2. Configurar el Envío de Correo (s-nail)
+### 2. Configurar el Envío de Correo (s-nail)
 Instala la utilidad: sudo dnf install s-nail.
 En Fedora 43, s-nail ha modernizado su configuración. Edita el archivo global:
 
@@ -66,7 +64,7 @@ set smtp-auth-password=tu-contraseña
 set from="Backup Server <tu-cuenta@dominio.com>"
 set smtp-use-starttls
 
-3. Instalación de los Scripts
+### 3. Instalación de los Scripts
 Descarga backup-mysql.sh y test-mysql-restore.sh en /usr/local/bin/. Luego, asigna permisos de ejecución y propiedad a tu usuario:
 
 bash
@@ -86,7 +84,7 @@ cron
 # Todos los domingos a las 5:00 AM - Simulacro de Restauración
 00 05 * * 7 /usr/local/bin/test-mysql-restore.sh
 
-Origen del Proyecto
+### Origen del Proyecto
 Este sistema fue desarrollado para resolver los fallos de redirección de descriptores de archivos en kernels y shells modernos. A diferencia de soluciones monolíticas, este enfoque separa el respaldo de la validación, permitiendo que el administrador reciba un reporte detallado no solo de que el archivo existe y cuánto pesa, sino de que los datos son 100% recuperables mediante un proceso de restauración real automatizado.
 
 

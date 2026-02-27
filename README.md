@@ -42,10 +42,19 @@ host=localhost
 
 [!IMPORTANT]
 SEGURIDAD: Es obligatorio asignar permisos restrictivos para que nadie más pueda leer tu contraseña:
+
+```
+bash
 chmod 600 ~/.my.cnf
+```
 
 ### 2. Configurar el Envío de Correo (s-nail)
-Instala la utilidad: sudo dnf install s-nail.
+Instala la utilidad: 
+```
+bash
+sudo dnf install s-nail.
+```
+
 En Fedora 43, s-nail ha modernizado su configuración. Edita el archivo global:
 
 ```

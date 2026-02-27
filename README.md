@@ -82,7 +82,15 @@ set smtp-use-starttls
 ```
 
 ### 3. Instalación de los Scripts
-Descarga backup-mysql.sh y test-mysql-restore.sh en /usr/local/bin/. Luego, asigna permisos de ejecución y propiedad a tu usuario:
+Descarga 
+```
+backup-mysql.sh
+ y
+test-mysql-restore.sh
+en /usr/local/bin/.
+```
+Luego, asigna permisos de ejecución y propiedad a tu usuario:
+
 ```
 bash
 sudo chown $USER:$USER /usr/local/bin/backup-*.sh
